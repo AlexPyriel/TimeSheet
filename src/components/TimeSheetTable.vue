@@ -148,6 +148,11 @@ export default {
       this.tempProps = { ...item }
       this.tempProps.hidden = !this.tempProps.hidden
       this.updateTask(this.tempProps)
+      .then(() => {
+        this.tempProps = {}
+        this.prevProps = {}
+        this.expanded = false
+      })
     },
     filterInput (event) {
       const regex = new RegExp('^[0-9.]$')
