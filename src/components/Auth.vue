@@ -63,7 +63,6 @@ export default {
           } else {
             localStorage.removeItem('rememberMe')
           }
-          this.$refs.form.reset()
           this.$router.push('/')
         })
         .catch(() => {
